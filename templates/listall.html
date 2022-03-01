@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Show All Records</title>
+        <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"/>
+        <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h2>Show Student Talbe - All records</h2>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Sex</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Addr</th>
+            </thead>
+            {% for student in students %}
+                <tr>
+                    <th scope="row">{{student.id}}</th>
+                    <td>{{student.cName}}</td>
+                    <td>{{student.cSex}}</td>
+                    <td>{{student.cBirthday}}</td>
+                    <td>{{student.cEmail}}</td>
+                    <td>{{student.cPhone}}</td>
+                    <td>{{student.cAddr}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
